@@ -18,7 +18,12 @@ if (isset($_POST['submit'])) {
 
     // Effectuez la connexion à la base de données
     try {
-        $conn = new PDO('mysql:host=localhost;dbname=ecf', 'root', '');
+        include ('configBDD.php');
+        /** @var Stringable $hostname_BDD */
+        /** @var Stringable $database_BDD */
+        /** @var Stringable $username_BDD */
+        /** @var Stringable $password_BDD */
+        $conn = new PDO("mysql:host=$hostname_BDD;dbname=$database_BDD", $username_BDD, $password_BDD);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Vérifiez la connexion
@@ -54,9 +59,9 @@ if (isset($_POST['submit'])) {
 <div class="corps">
     <div class="se-conecter">
         <form class="box" action="" method="post" name="login">
-            <div class="identifient">Identifient</div>
+            <label class="identifient" for="utilisateur">Identifient</label>
             <input class="text-identifient" type="text" id="utilisateur" name="utilisateur">
-            <div class="mot-de-passe">Mot de passe</div>
+            <label class="mot-de-passe" for="password">Mot de passe</label>
             <input class="text-password" type="password" id="password" name="password">
             <input class="button-se-connecter" type="submit" value="Se connecter" name="submit">
         </form>

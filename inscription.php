@@ -45,7 +45,12 @@ if (isset($_POST['submit'])) {
     if ($pass) {
         try {
             // Connectez-vous à la base de données
-            $conn = new PDO('mysql:host=localhost;dbname=ecf', 'root', '');
+            include ('configBDD.php');
+            /** @var Stringable $hostname_BDD */
+            /** @var Stringable $database_BDD */
+            /** @var Stringable $username_BDD */
+            /** @var Stringable $password_BDD */
+            $conn = new PDO("mysql:host=$hostname_BDD;dbname=$database_BDD", $username_BDD, $password_BDD);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Vérifiez la connexion
@@ -90,15 +95,15 @@ if (isset($_POST['submit'])) {
 
 <div class="corps">
     <form class="box" action="" method="post" name="inscription">
-        <div class="nom-pr-nom">Nom / Prénom</div>
+        <label class="nom-pr-nom" for="nom">Nom / Prénom</label>
         <input class="text-nom" type="text" id="nom" name="nom">
-        <div class="date-de-naissance">Date de naissance</div>
+        <label class="date-de-naissance" for="birthdate">Date de naissance</label>
         <input class="text-date-de-naissance" type="date" id="birthdate" name="birthdate">
-        <div class="adresse-e-mail">Adresse e-mail</div>
+        <label class="adresse-e-mail" for="email">Adresse e-mail</label>
         <input class="text-adresse-e-mail" type="email" id="email" name="email">
-        <div class="nom-d-utilisateur">Nom d’utilisateur</div>
+        <label class="nom-d-utilisateur" for="utilisateur">Nom d’utilisateur</label>
         <input class="text-nom-utilisateur" type="text" id="utilisateur" name="utilisateur">
-        <div class="mot-de-passe">Mot de passe</div>
+        <label class="mot-de-passe" for="password">Mot de passe</label>
         <input class="text-password" type="password" id="password" name="password">
         <input class="button-s-inscrire" type="submit" value="s'inscrire" name="submit">
     </form>

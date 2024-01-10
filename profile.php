@@ -16,7 +16,12 @@ if (empty($username)){
 
 try {
     // Connectez-vous à la base de données
-    $conn = new PDO('mysql:host=localhost;dbname=ecf', 'root', '');
+    include ('configBDD.php');
+    /** @var Stringable $hostname_BDD */
+    /** @var Stringable $database_BDD */
+    /** @var Stringable $username_BDD */
+    /** @var Stringable $password_BDD */
+    $conn = new PDO("mysql:host=$hostname_BDD;dbname=$database_BDD", $username_BDD, $password_BDD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Vérifiez la connexion
@@ -65,7 +70,12 @@ if (isset($_POST['modifier'])) {
     if ($pass){
         try {
             // Connectez-vous à la base de données
-            $conn = new PDO('mysql:host=localhost;dbname=ecf', 'root', '');
+            include ('configBDD.php');
+            /** @var Stringable $hostname_BDD */
+            /** @var Stringable $database_BDD */
+            /** @var Stringable $username_BDD */
+            /** @var Stringable $password_BDD */
+            $conn = new PDO("mysql:host=$hostname_BDD;dbname=$database_BDD", $username_BDD, $password_BDD);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Vérifiez la connexion
@@ -121,7 +131,12 @@ if (isset($_POST['supprimer'])) {
     if ($pass){
         try {
             // Connectez-vous à la base de données
-            $conn = new PDO('mysql:host=localhost;dbname=ecf', 'root', '');
+            include ('configBDD.php');
+            /** @var Stringable $hostname_BDD */
+            /** @var Stringable $database_BDD */
+            /** @var Stringable $username_BDD */
+            /** @var Stringable $password_BDD */
+            $conn = new PDO("mysql:host=$hostname_BDD;dbname=$database_BDD", $username_BDD, $password_BDD);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Vérifiez la connexion
@@ -197,11 +212,11 @@ if (isset($_POST['supprimer'])) {
     <div class="frame-10">
         <div class="frame-11" onclick="window.location.href='graph full.php?text=Bitcoin'">
             <div class="bitcoin">Bitcoin</div>
-            <img class="image-6" src="image/image-Bitcoin.png" />
+            <img class="image-6" src="image/image-Bitcoin.png" alt="image courbe Bitcoin" />
         </div>
         <div class="frame-122" onclick="window.location.href='graph full.php?text=Ethereum'">
             <div class="ethereum">Ethereum</div>
-            <img class="image-10" src="image/image-Ethereum.png" />
+            <img class="image-10" src="image/image-Ethereum.png" alt="image courbe Ethereum" />
         </div>
     </div>
 </div>
