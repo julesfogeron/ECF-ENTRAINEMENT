@@ -1,0 +1,166 @@
+.corps {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    flex-shrink: 0;
+    width: 520px;
+    height: 780px;
+    position: relative;
+}
+.button-s-inscrire {
+    background: #84a4bc;
+    border-radius: 58px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: 78px;
+    top: 670px;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+}
+.s-inscrire {
+    color: #ffffff;
+    text-align: center;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 46px;
+    top: 25px;
+    width: 280px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-password {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 550px;
+}
+.mot-de-passe {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 510px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-nom-utilisateur {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 430px;
+}
+.nom-d-utilisateur {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 390px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-adresse-e-mail {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 310px;
+}
+.adresse-e-mail {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 270px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-date-de-naissance {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 190px;
+}
+.date-de-naissance {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 150px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-nom {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 70px;
+}
+.nom-pr-nom {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 30px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.frame-17 {
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 89px;
+    position: relative;
+}

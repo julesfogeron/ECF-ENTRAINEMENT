@@ -1,0 +1,38 @@
+.property-1-web-connecter,
+.property-1-web-connecter * {
+    box-sizing: border-box;
+}
+.property-1-web-connecter {
+    background: #07297c;
+    padding: 7px 13px 7px 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: auto;
+    position: sticky;
+    overflow: hidden;
+}
+.mon-suivi-crypto {
+    color: #1554f0;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.button {
+    padding: 6px 0px 6px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 114px;
+    position: relative;
+    overflow: hidden;
+}

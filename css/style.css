@@ -1,0 +1,19 @@
+body{
+    margin: auto;
+    background-color: #99B0F3;
+}
+
+
+.corps,
+.corps * {
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+.corps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}

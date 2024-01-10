@@ -1,0 +1,98 @@
+.se-conecter {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    flex-shrink: 0;
+    width: 520px;
+    height: 560px;
+    position: relative;
+    overflow: hidden;
+}
+.button-se-connecter {
+    background: #84a4bc;
+    border-radius: 58px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: 78px;
+    top: 417px;
+    overflow: hidden;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+
+}
+.text-password {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 290px;
+    overflow: hidden;
+}
+.mot-de-passe {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 250px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-identifient {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 185px);
+    top: 170px;
+    overflow: hidden;
+}
+.identifient {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 75px;
+    top: 130px;
+    width: 370px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.s-inscrire {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    flex-shrink: 0;
+    width: 520px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.button-s-inscrire {
+    background: #84a4bc;
+    border-radius: 58px;
+    width: 370px;
+    height: 80px;
+    position: absolute;
+    left: 78px;
+    top: 60px;
+    overflow: hidden;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 24px;
+
+}
