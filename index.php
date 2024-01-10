@@ -28,14 +28,13 @@ if (isset($_POST['submit'])) {
 
         // Vérifiez la connexion
         if ($conn) {
-            // Hachez le mot de passe
-            // Vérifiez les informations de connexion
             $stmt = $conn->prepare("SELECT * FROM user WHERE utilisateur = ? AND password = ?");
+            // Hachez le mot de passe avec md5
             $stmt->execute(array($utilisateur, md5($password)));
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                // Connexion réussie, redirigez vers la page principale
+                // Connexion réussie, redirigez vers le profil
                 $_SESSION['username'] = $utilisateur;
                 header('Location: profile.php');
             } else {
@@ -58,6 +57,7 @@ if (isset($_POST['submit'])) {
 
 <div class="corps">
     <div class="se-conecter">
+        <!- envoi le formulaire avec la method post
         <form class="box" action="" method="post" name="login">
             <label class="identifient" for="utilisateur">Identifient</label>
             <input class="text-identifient" type="text" id="utilisateur" name="utilisateur">

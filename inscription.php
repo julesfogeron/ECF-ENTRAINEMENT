@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $pass = true;
 
+    //vérifier si ce n'est pas vide
     if (empty($nom)){
         echo "Erreur : le nom ne peut pas être vide. ";
         $pass = false;
