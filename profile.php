@@ -42,14 +42,16 @@ try {
     echo "Erreur : " . $e->getMessage();
 }
 
-
+// Vérifiez si le formulaire a été soumis
 if (isset($_POST['modifier'])) {
+    // Récupérez les données du formulaire
     $nom = $_POST['nom'];
     $birthdate = $_POST['birthdate'];
     $email = $_POST['email'];
     $username = $_POST['username'];
     $pass = true;
 
+    //vérifier si ce n'est pas vide
     if (empty($nom)){
         echo "Erreur : le nom ne peut pas être vide. ";
         $pass = false;
@@ -66,6 +68,7 @@ if (isset($_POST['modifier'])) {
         echo "Erreur : le nom d'utilisateur ne peut pas être vide. ";
         $pass = false;
     }
+
 
     if ($pass){
         try {
@@ -104,13 +107,16 @@ if (isset($_POST['modifier'])) {
     }
 }
 
+// Vérifiez si le formulaire a été soumis
 if (isset($_POST['supprimer'])) {
+    // Récupérez les données du formulaire
     $nom = $_POST['nom'];
     $birthdate = $_POST['birthdate'];
     $email = $_POST['email'];
     $username = $_POST['username'];
     $pass = true;
 
+    //vérifier si ce n'est pas vide
     if (empty($nom)){
         echo "Erreur : le nom ne peut pas être vide. ";
         $pass = false;

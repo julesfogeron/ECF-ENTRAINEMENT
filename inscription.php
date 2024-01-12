@@ -95,7 +95,8 @@ if (isset($_POST['submit'])) {
 <?php include('header.html') ?>
 
 <div class="corps">
-    <form class="box" action="" method="post" name="inscription">
+    <!--envoi le formulaire avec la method post-->
+    <form method="post">
         <label class="nom-pr-nom" for="nom">Nom / Prénom</label>
         <input class="text-nom" type="text" id="nom" name="nom">
         <label class="date-de-naissance" for="birthdate">Date de naissance</label>

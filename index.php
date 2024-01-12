@@ -57,8 +57,8 @@ if (isset($_POST['submit'])) {
 
 <div class="corps">
     <div class="se-conecter">
-        <!- envoi le formulaire avec la method post
-        <form class="box" action="" method="post" name="login">
+        <!--envoi le formulaire avec la method post-->
+        <form method="post">
             <label class="identifient" for="utilisateur">Identifient</label>
             <input class="text-identifient" type="text" id="utilisateur" name="utilisateur">
             <label class="mot-de-passe" for="password">Mot de passe</label>
