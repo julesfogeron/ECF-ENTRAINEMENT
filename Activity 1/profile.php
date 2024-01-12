@@ -16,7 +16,7 @@ if (empty($username)){
 
 try {
     // Connectez-vous à la base de données
-    include ('configBDD.php');
+    include('configBDD.php');
     /** @var Stringable $hostname_BDD */
     /** @var Stringable $database_BDD */
     /** @var Stringable $username_BDD */
@@ -73,7 +73,7 @@ if (isset($_POST['modifier'])) {
     if ($pass){
         try {
             // Connectez-vous à la base de données
-            include ('configBDD.php');
+            include('configBDD.php');
             /** @var Stringable $hostname_BDD */
             /** @var Stringable $database_BDD */
             /** @var Stringable $username_BDD */
@@ -137,7 +137,7 @@ if (isset($_POST['supprimer'])) {
     if ($pass){
         try {
             // Connectez-vous à la base de données
-            include ('configBDD.php');
+            include('configBDD.php');
             /** @var Stringable $hostname_BDD */
             /** @var Stringable $database_BDD */
             /** @var Stringable $username_BDD */

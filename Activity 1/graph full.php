@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Graph full</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/graph%20full.css">
+    <link rel="stylesheet" href="css/graph full.css">
 </head>
 <body>
 <?php

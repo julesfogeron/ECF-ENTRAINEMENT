@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 
     // Effectuez la connexion à la base de données
     try {
-        include ('configBDD.php');
+        include('configBDD.php');
         /** @var Stringable $hostname_BDD */
         /** @var Stringable $database_BDD */
         /** @var Stringable $username_BDD */
