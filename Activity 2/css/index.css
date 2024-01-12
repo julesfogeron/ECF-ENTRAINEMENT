@@ -1,0 +1,16 @@
+.ajouter {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+
+}
+.image {
+    width: 50px;
+}
+
+.barre {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
