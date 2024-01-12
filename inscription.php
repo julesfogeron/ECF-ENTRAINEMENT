@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>inscption</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/inscription.css">
 </head>
