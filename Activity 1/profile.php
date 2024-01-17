@@ -5,6 +5,8 @@
     <title>Profile</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
 <?php
@@ -218,14 +220,55 @@ if (isset($_POST['supprimer'])) {
     <div class="frame-10">
         <div class="frame-11" onclick="window.location.href='graph full.php?text=Bitcoin'">
             <div class="bitcoin">Bitcoin</div>
-            <img class="image-6" src="image/image-Bitcoin.png" alt="image courbe Bitcoin" />
+            <canvas id="graph-bitcoin"></canvas>
         </div>
         <div class="frame-122" onclick="window.location.href='graph full.php?text=Ethereum'">
             <div class="ethereum">Ethereum</div>
-            <img class="image-10" src="image/image-Ethereum.png" alt="image courbe Ethereum" />
+            <canvas id="graph-ethereum"></canvas>
         </div>
     </div>
 </div>
+<script>
+    graph("graph-bitcoin","Bitcoin")
+    graph("graph-ethereum","Ethereum")
+
+    function graph(id,name){
+        var reponse = fetch("https://api.coingecko.com/api/v3/coins/" + name.toLowerCase() + "/market_chart?vs_currency=eur&days=1").then(res => res.json()).then((data) => { return data; });
+
+        function graphreponse(jsonElement) {
+            let ctx = document.getElementById(id)
+            var date = []
+            var valeur = []
+            for (let i = 1; i < jsonElement.length; i++) {
+                var datee = new Date(jsonElement[i]["0"])
+                date.push(datee.getHours() + "h " + datee.getMinutes() + "m " + datee.getSeconds() + "s")
+                valeur.push(jsonElement[i]["1"])
+            }
+
+            let data = {
+                labels: date,
+                datasets: [{
+                    label: name,
+                    data: valeur,
+                    borderColor: "#475460"
+                }]
+            }
+            console.log(data)
+            new Chart(ctx,{
+                type: "line",
+                data: data,
+                options: {
+                    responsive: true
+                }
+            });
+        }
+
+        reponse.then((json) => graphreponse(json["prices"]))
+    }
+
+
+
+</script>
 
 <?php include('footer.html') ?>
 </body>
